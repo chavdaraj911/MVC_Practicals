@@ -1,0 +1,51 @@
+﻿@model mvcformvc.Models.login
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        This is login Page "Crickter"
+    </div>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    id
+                </td>
+                <td>
+                    @Model.id
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    name
+                </td>
+                <td>
+                    @Model.name
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    login
+                </td>
+                <td>
+                    @Model.login_id
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    password
+                </td>
+                <td>
+                    @Model.password
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
