@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace Html_Helper1.Controllers
 {
-    public class HomeController : Controller
+    public class Builtin_helperController : Controller
     {
-        // GET: Home
+        // GET: Builtin_helper
         public ActionResult Index()
         {
             return View();
@@ -17,5 +17,6 @@ namespace Html_Helper1.Controllers
         {
             return View();
         }
+
     }
 }

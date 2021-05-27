@@ -6,14 +6,10 @@ using System.Web.Mvc;
 
 namespace Html_Helper1.Controllers
 {
-    public class HomeController : Controller
+    public class customController : Controller
     {
-        // GET: Home
+        // GET: custom
         public ActionResult Index()
-        {
-            return View();
-        }
-        public ViewResult About()
         {
             return View();
         }
