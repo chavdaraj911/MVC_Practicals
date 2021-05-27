@@ -1,5 +1,8 @@
-﻿@using Html_Helper1.Models
-@model strongly
+﻿
+@{
+    Layout = null;
+}
+
 <!DOCTYPE html>
 
 <html>
@@ -9,17 +12,7 @@
 </head>
 <body>
     <div> 
-        @*Strongly html helper*@
-        @using (Html.BeginForm("myform"))
-        {
-            @Html.TextBoxFor(model => model.name)
-        <br />
-            @Html.TextBoxFor(model => model.address)
-    <br />
-            @Html.CheckBoxFor(m => m.isemployee)
-    <br />
-            <input type="submit" value="Submit" />
-        }
+        @Html.imagetag("E:/Rajsthan trip/Canon EOS 1300D/rr","imgage")
     </div>
 </body>
 </html>
