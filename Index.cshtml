@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Html_Helper1.Models
+@model Employee
+
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -7,23 +10,24 @@
 </head>
 <body>
     <div> 
-        @helper mylisthelper(string[] str)
-        {
-            <ul>
-                @foreach (var item in str)
-                {
-                    <li>
-                        @item
-                    </li>
-                }
-                </ul>
-         }
+        @Html.DisplayName("name")
+        <br>
+        @Html.DisplayNameFor(model => model.dateofbirth)
+    <br />
+    <br />  
+        @Html.DisplayText("name")
+        @Html.DisplayTextFor(m=>m.dateofbirth)
+    <br />
+    <br />
+        @Html.Display("name")
     </div>
-    <div>
-        <label>Name List</label>
-        <div>
-            @mylisthelper(new string[] {"raj","jay","jiya"})
-           </div>
-    </div>
+    <br />
+    <br />
+    @*model full value*@
+    @Html.DisplayForModel()
+
+    <br>
+    <br />
+    
 </body>
 </html>

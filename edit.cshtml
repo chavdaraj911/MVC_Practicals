@@ -1,0 +1,37 @@
+﻿@using Html_Helper1.Models
+@model Employee
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>edit</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("myform"))
+        {
+
+
+        @*Editor used*@
+        <!--@Html.DisplayName("name") = @Html.Editor("name")
+        @Html.DisplayName("id") =@Html.Editor("id")
+        <br />
+        <br />
+
+        @Html.DisplayNameFor(m => m.id) - @Html.EditorFor(m => m.id)
+        @Html.DisplayNameFor(m => m.dateofbirth)-@Html.EditorFor(m => m.dateofbirth)
+    <br />-->
+    <br />
+        @Html.EditorForModel()
+    <br />  
+        <input type="submit" value="Submit" />
+
+        }
+    </div>
+</body>
+</html>
