@@ -1,9 +1,4 @@
-﻿
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 <head>
@@ -12,7 +7,34 @@
 </head>
 <body>
     <div> 
-        @Html.imagetag("E:/Rajsthan trip/Canon EOS 1300D/rr","imgage")
+        @*This One view in move*@
+        @Html.ActionLink("View Page","About") 
+
+        @*One controller to other view in move*@
+        @Html.ActionLink("Click Me","index","Home")
     </div>
+    <div>
+        @*Create textbox*@
+        @Html.TextBox("txtbox1")
+    </div>
+    <div>
+        @*One text in any attribute can change like txtbox-id,textbox-value,etc*@
+        <br>
+        @Html.TextBox("txt1",null,new {placeholder = "Enter name"})
+        
+    </div>
+    <br>
+    @Html.TextBox("txt3",null, new { @class = "myclass",style = "width:500px"})
+    <br />
+  
+    @Html.CheckBox("chk1",new { })
+<br />
+    @Html.Password("pwd")
+<br />  
+<br />
+     @{ 
+         string name = ".net";
+     }
+    @Html.RadioButton("rbd1",name,isChecked:false)
 </body>
 </html>
