@@ -5,7 +5,7 @@ using System.Web;
 
 namespace razor_satements.Models
 {
-    public class Employee
+    public class emp
     {
         public int id { get; set; }
         public string name { get; set; }

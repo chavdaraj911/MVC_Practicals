@@ -1,35 +1,83 @@
-﻿
+﻿@using razor_satements.Models
+@model razor_satements.Models.Employee
+
+<!DOCTYPE html>
+
 <html>
 <head>
-    
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
 </head>
 <body>
-    <div> 
-        This is Razor Demo practical.
-    </div>
-    <div>
-        @DateTime.Now
-    </div>
-    <div>
-        @(3 + 4)
-    </div>
     @{ 
-        var a = 1;
-        var b = 2;
-        var c = a + b;
-        var currenttime = DateTime.Now;
-        var tomorrowtime = DateTime.Now.AddDays(1);
-        var colorlist = new List<String>() { "red", "green" };
+        var istrue = true;
     }
-    <div>
-        <label>@c</label><br>
-        <label>currenttime -  @currenttime</label><br>
-        <label>tomorrowtime - @tomorrowtime</label><br>
-        <label>@colorlist.LastOrDefault()</label>
+    <div> 
+        @if (istrue)
+        {
+            <h1>Hello ,this is if block </h1>
+        } 
     </div>
     <div>
-        @*escap code like two @ use to escap;*@
-        my twitter account - @@raj_chavda
+        @*if and elseif loop code;*@
+
+        @{
+            int myint = 1;
+        }
+
+        @if (myint == 1)
+        {
+            <h2>Block 1 is print</h2>
+        }
+        else if (myint == 2)
+        {
+            <h2>Block 2 is print</h2>
+        }
+        else
+        {
+            <h3>this else part</h3>
+        }
     </div>
+
+    <div>
+        @*condition code;*@
+
+        @(myint == 3? "codition is true" : "codition is false")
+    </div>
+
+    <div>
+        @*For loop*@
+
+        @for (int i = 0; i < 5; i++)
+        {
+            <h2>For loop is : @i index </h2>
+        }
+    </div>
+
+    <div>
+        @**foreach loop*@
+
+        @{ 
+            var mylist = new List<int>() { 1, 2, 3, 4, 5 };
+        }
+
+        @foreach (var obj in mylist)
+        {
+            <h4>my value is: @obj</h4><br>
+        }
+    </div>
+
+    <div>
+        @*model's call here*@
+
+        @{
+            Employee emp = new Employee() { id = 1, name = "raj" };
+
+        }
+    </div>
+    <div>
+        id = @emp.id
+        name = @emp.name    </div>     
+    
 </body>
 </html>
