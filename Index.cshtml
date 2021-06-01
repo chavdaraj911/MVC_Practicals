@@ -1,40 +1,35 @@
-﻿<!DOCTYPE html>
-
+﻿
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    
 </head>
 <body>
     <div> 
-        @*This One view in move*@
-        @Html.ActionLink("View Page","About") 
-
-        @*One controller to other view in move*@
-        @Html.ActionLink("Click Me","index","Home")
+        This is Razor Demo practical.
     </div>
     <div>
-        @*Create textbox*@
-        @Html.TextBox("txtbox1")
+        @DateTime.Now
     </div>
     <div>
-        @*One text in any attribute can change like txtbox-id,textbox-value,etc*@
-        <br>
-        @Html.TextBox("txt1",null,new {placeholder = "Enter name"})
-        
+        @(3 + 4)
     </div>
-    <br>
-    @Html.TextBox("txt3",null, new { @class = "myclass",style = "width:500px"})
-    <br />
-  
-    @Html.CheckBox("chk1",new { })
-<br />
-    @Html.Password("pwd")
-<br />  
-<br />
-     @{ 
-         string name = ".net";
-     }
-    @Html.RadioButton("rbd1",name,isChecked:false)
+    @{ 
+        var a = 1;
+        var b = 2;
+        var c = a + b;
+        var currenttime = DateTime.Now;
+        var tomorrowtime = DateTime.Now.AddDays(1);
+        var colorlist = new List<String>() { "red", "green" };
+    }
+    <div>
+        <label>@c</label><br>
+        <label>currenttime -  @currenttime</label><br>
+        <label>tomorrowtime - @tomorrowtime</label><br>
+        <label>@colorlist.LastOrDefault()</label>
+    </div>
+    <div>
+        @*escap code like two @ use to escap;*@
+        my twitter account - @@raj_chavda
+    </div>
 </body>
 </html>
